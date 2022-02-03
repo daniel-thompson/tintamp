@@ -16,6 +16,7 @@ configure
 depcomp
 install-sh
 missing
+test-driver
 
 .dirstamp
 *~
@@ -25,6 +26,8 @@ missing
 *.Po
 *.o
 *#
+*.log
+*.trs
 
 src/librfn/demos/fibredemo
 
@@ -70,3 +73,59 @@ src/tintdrum/tintdrum
 tests/media/
 arm-none-eabi/
 x86_64-unknown-linux-gnu/
+
+	src/librfn/tests/bitopstest.log
+	src/librfn/tests/bitopstest.trs
+	src/librfn/tests/enumtest.log
+	src/librfn/tests/enumtest.trs
+	src/librfn/tests/fibredemotest.log
+	src/librfn/tests/fibredemotest.trs
+	src/librfn/tests/fibretest.log
+	src/librfn/tests/fibretest.trs
+	src/librfn/tests/fuzztest.log
+	src/librfn/tests/fuzztest.trs
+	src/librfn/tests/listtest.log
+	src/librfn/tests/listtest.trs
+	src/librfn/tests/messageqtest.log
+	src/librfn/tests/messageqtest.trs
+	src/librfn/tests/protothreadstest.log
+	src/librfn/tests/protothreadstest.trs
+	src/librfn/tests/randtest.log
+	src/librfn/tests/randtest.trs
+	src/librfn/tests/utiltest.log
+	src/librfn/tests/utiltest.trs
+	src/librfn/tests/wavheadertest.log
+	src/librfn/tests/wavheadertest.trs
+	src/libtt/tests/analysetest.log
+	src/libtt/tests/analysetest.trs
+	src/libtt/tests/benchmark.log
+	src/libtt/tests/benchmark.trs
+	src/libtt/tests/biquadtest.log
+	src/libtt/tests/biquadtest.trs
+	src/libtt/tests/cabsimtest.log
+	src/libtt/tests/cabsimtest.trs
+	src/libtt/tests/delaytest.log
+	src/libtt/tests/delaytest.trs
+	src/libtt/tests/drummachinetest.log
+	src/libtt/tests/drummachinetest.trs
+	src/libtt/tests/preamptest.log
+	src/libtt/tests/preamptest.trs
+	src/libtt/tests/presettest.log
+	src/libtt/tests/presettest.trs
+	src/libtt/tests/sampletest.log
+	src/libtt/tests/sampletest.trs
+	src/libtt/tests/siggentest.log
+	src/libtt/tests/siggentest.trs
+	src/libtt/tests/tintamptest.log
+	src/libtt/tests/tintamptest.trs
+	src/libtt/tests/tonestacktest.log
+	src/libtt/tests/tonestacktest.trs
+	src/libtt/tests/tubestagetest.log
+	src/libtt/tests/tubestagetest.trs
+	src/libtt/tests/waveshapertest.log
+	src/libtt/tests/waveshapertest.trs
+	src/libtt/tests/wavreadertest.log
+	src/libtt/tests/wavreadertest.trs
+	test-driver
+	test-suite.log
+
