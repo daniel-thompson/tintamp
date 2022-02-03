@@ -63,6 +63,7 @@ pulsewriter_SOURCES = src/libtt/pulsewriter.c
 endif
 
 
+BUILT_SOURCES += src/libtt/controls.h
 CLEANFILES += src/libtt/controls.h
 src/libtt/controls.h : $(top_srcdir)/src/libtt/extract_controls.sh
 	@echo "  GEN      $@"
