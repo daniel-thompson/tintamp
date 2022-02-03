@@ -15,10 +15,12 @@
 ACLOCAL_AMFLAGS = -I m4
 
 bin_PROGRAMS = \
-	src/jacklab/jacklab \
-	src/jacklua/tintamp_jacklua \
+    $(src_jack_programs) \
 	$(src_tintamp_programs) \
 	$(src_tintdrum_programs)
+if HAVE_JACK
+src_jack_programs =	src/jacklab/jacklab src/jacklua/tintamp_jacklua
+endif
 if GTK
 src_tintamp_programs = src/tintamp/tintamp
 endif

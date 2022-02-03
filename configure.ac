@@ -45,9 +45,11 @@ PKG_CHECK_MODULES([ALSA], [alsa >= 1.0],
           AC_DEFINE(HAVE_ALSA,1,[Have ALSA]),
 	AM_CONDITIONAL(HAVE_ALSA, false))
 
-dnl Jack is mandatory (for now)
-PKG_CHECK_MODULES([JACK], [jack >= 0.9])
-AC_DEFINE(HAVE_JACK,1,[Have JACK])
+dnl Jack is optional (but disables lots of great toys if disabled)
+PKG_CHECK_MODULES([JACK], [jack >= 0.9],
+	AM_CONDITIONAL(HAVE_JACK, true)
+          AC_DEFINE(HAVE_JACK,1,[Have Jack]),
+	AM_CONDITIONAL(HAVE_JACK, false))
 
 dnl Pulseaudio is optional (but tintdrum won't build without it)
 PKG_CHECK_MODULES([PULSE], [libpulse-simple >= 1.1],

@@ -34,8 +34,7 @@ src_libtt_libtt_a_SOURCES=\
 	src/libtt/dcblocker.c \
 	src/libtt/delay.c \
 	src/libtt/firstorder.c \
-	src/libtt/jackcommon.c \
-	src/libtt/jackwriter.c \
+	$(jack_SOURCES) \
 	$(pulsewriter_SOURCES) \
 	src/libtt/siggen.c \
 	src/libtt/quantizer.c \
@@ -53,6 +52,9 @@ src_libtt_libtt_a_SOURCES=\
 	src/libtt/preset.c \
 	src/libtt/presetio.c
 
+if HAVE_JACK
+jack_SOURCES = src/libtt/jackcommon.c src/libtt/jackwriter.c
+endif
 if HAVE_ALSA
 alsawriter_SOURCES = src/libtt/alsawriter.c
 endif

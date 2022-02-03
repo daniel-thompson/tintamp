@@ -25,7 +25,7 @@ void tt_audiowriter_init(tt_audiowriter_t *p, tt_context_t *ctx)
 	// when we add jack support this will become runtime/environment selected
 	p->vtable = NULL;
 
-#if 1
+#ifdef HAVE_JACK
 	if (NULL == p->vtable) {
 		static tt_audiowriter_vtable_t jack_vtable = {
 			(void *) &tt_jackwriter_finalize,
